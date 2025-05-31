@@ -101,13 +101,23 @@
         {
           type: "Tile",
           properties: {
+            title: "overlay",
+          },
+          source: {
+            type: "XYZ",
+            url: "//tiles.maps.eox.at/wmts/1.0.0/overlay_base_3857/default/g/{z}/{y}/{x}.jpg",
+            attribution: 'Overlay { Data © OpenStreetMap contributors, Rendering © EOX and MapServer }'
+          }
+        },{
+          type: "Tile",
+          properties: {
             title: "Terrain Light"
           },
           source: {
             type: "XYZ",
             url: "//tiles.maps.eox.at/wmts/1.0.0/terrain-light_3857/default/g/{z}/{y}/{x}.jpg"
           }
-        }
+        },
       ];
       map.map.getLayers().changed();
     };
